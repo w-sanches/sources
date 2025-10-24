@@ -28,7 +28,7 @@ impl Home for OlympusScanlation {
 				}
 
 				Some(Manga {
-					key: entry.id.to_string(),
+					key: entry.slug.clone(),
 					cover: Some(entry.cover),
 					title: entry.name,
 					url: format!("{BASE_URL}/series/{}", entry.slug).into(),
@@ -63,7 +63,7 @@ impl Home for OlympusScanlation {
 
 				Some(MangaWithChapter {
 					manga: Manga {
-						key: entry.id.to_string(),
+						key: entry.slug,
 						cover: Some(entry.cover),
 						title: entry.name,
 						url: manga_url,
@@ -103,7 +103,7 @@ impl Home for OlympusScanlation {
 				}
 
 				Some(Manga {
-					key: entry.id.to_string(),
+					key: entry.slug.clone(),
 					cover: Some(entry.cover),
 					title: entry.name,
 					url: format!("{BASE_URL}/series/{}", entry.slug).into(),
